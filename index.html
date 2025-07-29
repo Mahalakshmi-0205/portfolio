@@ -3,69 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            background-color: #f0f2f5;
-        }
-        header {
-            background-color: #4a90e2;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-        .welcome-container {
-            text-align: center;
-            max-width: 600px;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-    </style>
+    <title>Mahalakshmi R - Game Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome</h1>
-    </header>
-    
-    <main>
-        <div class="welcome-container">
-            <h2>Hello, World!</h2>
-            <p>Welcome to my website. This is a simple welcome page created with HTML and basic CSS styling.</p>
-            <p>Feel free to explore and enjoy your stay!</p>
-        </div>
-    </main>
+    <div class="game-container">
+        <header class="hero-section">
+            <h1 class="glitch-text">MAHALAKSHMI R</h1>
+            <p class="role-text">Level 3 ECE Engineer</p>
+            <div class="status-bar">
+                <div class="status-item">Class: Electronics and Communication Engineering</div>
+                <div class="status-item">Location: SSN College of Engineering, Tamil Nadu</div>
+            </div>
+        </header>
 
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+        <section class="skills-section">
+            <h2 class="section-title">TECHNICAL SKILLS</h2>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-bars">
+                    <div class="skill-bar">
+                        <span class="skill-name">C++</span>
+                        <div class="power-bar"><div class="power-level" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">Java</span>
+                        <div class="power-bar"><div class="power-level" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">Python</span>
+                        <div class="power-bar"><div class="power-level" style="width: 88%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">MATLAB</span>
+                        <div class="power-bar"><div class="power-level" style="width: 82%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">Verilog</span>
+                        <div class="power-bar"><div class="power-level" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-bar">
+                        <span class="skill-name">VHDL</span>
+                        <div class="power-bar"><div class="power-level" style="width: 80%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Tools/Technologies</h3>
+                <div class="skill-cards">
+                    <div class="skill-card">
+                        <div class="skill-icon">🔧</div>
+                        <span>Cadence</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">📊</div>
+                        <span>MATLAB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>Domains</h3>
+                <div class="domain-badges">
+                    <div class="domain-badge">Machine Learning</div>
+                    <div class="domain-badge">IoT</div>
+                    <div class="domain-badge">Embedded Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="console-window">
+                <div class="console-header">
+                    <span class="console-dot"></span>
+                    <span class="console-dot"></span>
+                    <span class="console-dot"></span>
+                </div>
+                <div class="console-content">
+                    <p>> EMAIL: <a href="mailto:mahalakshmi2310174@ssn.edu.in">mahalakshmi2310174@ssn.edu.in</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
