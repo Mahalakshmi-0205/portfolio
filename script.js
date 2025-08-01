@@ -1,4 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
+// Feature detection and polyfill loading
+(function() {
+    // Check for requestAnimationFrame support and add polyfill if needed
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = (function() {
+            return window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function(callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+    }
+})();
+
+// Cross-browser event listener function
+function addEvent(element, event, callback) {
+    if (element.addEventListener) {
+        element.addEventListener(event, callback, false);
+    } else if (element.attachEvent) {
+        element.attachEvent('on' + event, callback);
+    } else {
+        element['on' + event] = callback;
+    }
+}
+
+// Initialize when DOM is ready
+function domReady(fn) {
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        setTimeout(fn, 1);
+    } else {
+        addEvent(document, 'DOMContentLoaded', fn);
+    }
+}
+
+domReady(function() {
+    // Check if particles.js is loaded
+    if (typeof particlesJS !== 'function') {
+        console.warn('particles.js is not loaded. The background animation will not work.');
+        return;
+    }
+    
     // Particle.js configuration
     particlesJS('particles-js', {
         particles: {
@@ -71,4 +113,29 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         retina_detect: true
     });
+    
+    // Add fallback for browsers that don't support CSS animations
+    if (!('animation' in document.documentElement.style) && 
+        !('webkitAnimation' in document.documentElement.style) && 
+        !('mozAnimation' in document.documentElement.style) && 
+        !('msAnimation' in document.documentElement.style)) {
+        
+        console.warn('CSS animations not supported. Some visual effects may not work.');
+        
+        // Simple fallback for glitch effect
+        var glitchText = document.querySelector('.glitch-text');
+        if (glitchText) {
+            setInterval(function() {
+                glitchText.style.marginLeft = (Math.random() * 4 - 2) + 'px';
+                glitchText.style.marginTop = (Math.random() * 4 - 2) + 'px';
+            }, 100);
+        }
+        
+        // Simple fallback for power bars
+        var powerLevels = document.querySelectorAll('.power-level');
+        for (var i = 0; i < powerLevels.length; i++) {
+            var width = powerLevels[i].style.width || '0%';
+            powerLevels[i].style.width = width;
+        }
+    }
 });

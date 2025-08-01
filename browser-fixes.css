@@ -1,0 +1,80 @@
+/* Cross-browser compatibility fixes */
+
+/* Fix for older Firefox versions */
+@-moz-document url-prefix() {
+    .power-level {
+        width: 100%;
+    }
+}
+
+/* Fix for IE 10-11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .power-level {
+        width: 100%;
+    }
+    
+    .skill-card {
+        display: inline-block;
+    }
+    
+    .domain-badge {
+        display: inline-block;
+    }
+}
+
+/* Fix for Edge (pre-Chromium) */
+@supports (-ms-ime-align:auto) {
+    .power-level {
+        width: 100%;
+    }
+    
+    .skill-card {
+        display: inline-block;
+    }
+    
+    .domain-badge {
+        display: inline-block;
+    }
+}
+
+/* Fix for Safari */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+        .glitch-text {
+            -webkit-text-stroke: 1px rgba(255, 0, 255, 0.5);
+        }
+    }
+}
+
+/* Fix for older Android browsers */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .skill-bars {
+        display: block;
+    }
+    
+    .skill-bar {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Fallback for browsers that don't support flexbox */
+.skill-cards, .domain-badges {
+    display: block\9; /* IE9 fallback */
+}
+
+.skill-card, .domain-badge {
+    display: inline-block\9; /* IE9 fallback */
+    margin: 0.5rem\9; /* IE9 fallback */
+}
+
+/* Fix for older Opera browsers */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+    .skill-cards, .domain-badges {
+        display: block;
+    }
+    
+    .skill-card, .domain-badge {
+        display: inline-block;
+        margin: 0.5rem;
+    }
+}
