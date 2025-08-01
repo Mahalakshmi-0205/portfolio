@@ -1,0 +1,48 @@
+# Netlify configuration file
+
+[build]
+  publish = "./"
+  command = "echo 'No build required'"
+
+# Redirect all paths to index.html for SPA-like behavior
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-UA-Compatible = "IE=edge,chrome=1"
+    Cache-Control = "public, max-age=86400"
+
+# Set CORS headers for font files
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "*.ttf"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "*.eot"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "*.otf"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

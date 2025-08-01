@@ -1,0 +1,30 @@
+{
+  "name": "mahalakshmi-portfolio",
+  "version": "1.0.0",
+  "description": "Mahalakshmi R's Portfolio - A retro game-styled portfolio website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "retro",
+    "game",
+    "cross-browser"
+  ],
+  "author": "Mahalakshmi R",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahalakshmiramkumar/portfolio-1.git"
+  },
+  "homepage": "https://mahalakshmiramkumar.github.io/portfolio-1/"
+}

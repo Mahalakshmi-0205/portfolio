@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Go to Mahalakshmi R's Portfolio</title>
+    <meta http-equiv="refresh" content="0; URL=https://mahalakshmiramkumar.github.io/portfolio-1/">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #0ff;
+            margin-top: 0;
+        }
+        p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        a {
+            color: #ff00ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #0ff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <!-- Polyfills for older browsers -->
+    <script>
+        // Check if the browser supports HTML5 elements
+        (function() {
+            var e = "abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(',');
+            for (var i = 0; i < e.length; i++) {
+                document.createElement(e[i]);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting to Portfolio</h1>
+        <div class="loader"></div>
+        <p>You are being redirected to Mahalakshmi R's Portfolio...</p>
+        <p>If you are not redirected automatically, please click <a href="https://mahalakshmiramkumar.github.io/portfolio-1/">here</a>.</p>
+    </div>
+    <script>
+        // Fallback redirect for browsers that don't support meta refresh
+        setTimeout(function() {
+            window.location.href = "https://mahalakshmiramkumar.github.io/portfolio-1/";
+        }, 1500);
+    </script>
+</body>
+</html>

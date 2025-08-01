@@ -6,6 +6,38 @@ A retro game-styled portfolio website showcasing my skills and experience as an 
 
 Visit the live site: [Mahalakshmi R's Portfolio](https://mahalakshmiramkumar.github.io/portfolio-1/)
 
+### Quick Access URLs
+
+The following URLs can be used to access the portfolio from any browser:
+
+- Main URL: [https://mahalakshmiramkumar.github.io/portfolio-1/](https://mahalakshmiramkumar.github.io/portfolio-1/)
+- Short URL: [go.html](https://mahalakshmiramkumar.github.io/portfolio-1/go.html) - Simple redirect with loading animation
+- Redirect: [redirect.html](https://mahalakshmiramkumar.github.io/portfolio-1/redirect.html) - Basic HTML redirect
+- PHP Redirect: [redirect.php](https://mahalakshmiramkumar.github.io/portfolio-1/redirect.php) - For PHP-enabled servers
+
+### Server Options
+
+Multiple server options are available for hosting this portfolio:
+
+1. **GitHub Pages** (current): Automatically deployed from the main branch
+2. **Netlify**: Ready to deploy with included `netlify.toml` configuration
+   - [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/mahalakshmiramkumar/portfolio-1)
+3. **Vercel**: Ready to deploy with included `vercel.json` configuration
+   - [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mahalakshmiramkumar/portfolio-1)
+4. **Node.js Server**: Run locally or deploy to any Node.js hosting
+   ```
+   # Install dependencies (optional)
+   npm install
+   
+   # Start the server
+   npm start
+   ```
+5. **Python Server**: For quick local testing
+   ```
+   python -m http.server 8000
+   ```
+6. **Any HTTP Server**: The site is compatible with Apache, Nginx, or any standard web server
+
 ## Features
 
 - Retro game-inspired design
